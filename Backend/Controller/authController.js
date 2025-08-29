@@ -63,7 +63,7 @@ const register = async (req, res) => {
         });
     }
 
-    const { name, email, password } = req.body;
+    const { name, email, password, role } = req.body;
 
     try {
         const existingUser = await User.findOne({ email });
@@ -75,23 +75,26 @@ const register = async (req, res) => {
         const user = await User.create({
             name,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            role: role || 'customer'  // fallback default
         });
 
-        const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
+        const token = jwt.sign({ id: user._id, role: user.role }, JWT_SECRET, { expiresIn: '7d' });
 
         res.status(201).json({
             status: 201,
             message: 'User created successfully',
             token,
             userID: user._id,
-            name: user.name
+            name: user.name,
+            role: user.role
         });
 
     } catch (err) {
         res.status(500).json({ status: 500, message: 'Server error' });
     }
 };
+
 
 export default {
     authenticate,

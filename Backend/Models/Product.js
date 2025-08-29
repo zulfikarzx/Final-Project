@@ -5,7 +5,7 @@ const productSchema = new mongoose.Schema({
   status: { type: String, required: true },
   category_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true },
   is_featured: { type: Boolean, default: false },
-  sku: { type: String, unique: true, required: true },
+  // sku: { type: String, unique: true, required: true },
   price: { type: Number, required: true },
   compare_price: { type: Number },
   description: { type: String },

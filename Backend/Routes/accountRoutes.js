@@ -7,7 +7,7 @@ import {
 
 const router = express.Router();
 
-router.post('/register', register);
+// router.post('/register', register);
 router.post('/login', authenticate);
 router.get('/getOderdetails/:id', getOrderDetails);
 

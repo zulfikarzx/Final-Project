@@ -376,7 +376,7 @@ const Create = ({ placeholder }) => {
                         )}
                       </div>
 
-                      <div>
+                      {/* <div>
                         <label
                           htmlFor=""
                           className="block mb-2 text-sm font-medium text-gray-900"
@@ -390,10 +390,7 @@ const Create = ({ placeholder }) => {
                           })}
                           placeholder="Enter sku"
                         />
-                      </div>
-                    </div>
-
-
+                      </div> */}
 <div className="form-group">
                         <label className="block mb-2 text-sm font-medium text-gray-900">
                           Featured:
@@ -412,6 +409,14 @@ const Create = ({ placeholder }) => {
                           </span>
                         )}
                       </div>
+
+
+
+
+                    </div>
+
+
+
                     
 
 

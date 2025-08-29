@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer'
 
 const SignUp = () => {
   const [name, setName] = useState('');
+  const [role, setRole] = useState('customer'); // default value
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -26,6 +27,7 @@ const SignUp = () => {
       },
       body: JSON.stringify({
         name,
+        role,   // send role to backend
         email,
         password,
       }),
@@ -33,17 +35,17 @@ const SignUp = () => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-     if(data.status == 201){
+     if(data.status === 201){
         const userinfo = {
             status: data.status,
             message: data.message,
-            id : data.id,
-            name : data.name
+            id : data.userID,
+            name : data.name,
+            role : role
         }
         localStorage.setItem('userinfo', JSON.stringify(userinfo));
         window.location.href = '/login';
      }
-      
     })
     .catch((error) => {
       setError(error.message);
@@ -65,6 +67,32 @@ const SignUp = () => {
             placeholder="Enter name"
           />
         </div>
+
+        {/* User Type Radio Buttons */}
+        <div className="form-group">
+          <label>User Type:</label>
+          <div className="radio-group">
+            <label className="radio-option">
+              <input
+                type="radio"
+                value="customer"
+                checked={role === 'customer'}
+                onChange={(event) => setRole(event.target.value)}
+              />
+              <span>Customer</span>
+            </label>
+            <label className="radio-option">
+              <input
+                type="radio"
+                value="admin"
+                checked={role === 'admin'}
+                onChange={(event) => setRole(event.target.value)}
+              />
+              <span>Admin</span>
+            </label>
+          </div>
+        </div>
+
         <div className="form-group">
           <label>Email:</label>
           <input
@@ -101,6 +129,24 @@ const SignUp = () => {
     <Banner/>
     <Subscribe/>
     <Footer/>
+
+    {/* Inline CSS for radio buttons */}
+    <style>{`
+       .radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+.radio-group label {
+  font-size: 17px;
+  color: #333;
+}
+.radio-group input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+    `}</style>
  </> );
 };
 

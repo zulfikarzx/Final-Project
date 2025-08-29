@@ -37,7 +37,7 @@ export default {
         title,
         price,
         status,
-        sku,
+      
         category_id,
         is_featured,
         compare_price,
@@ -50,17 +50,17 @@ export default {
         gallary,
       } = req.body;
 
-      if (!title || !price || !status || !sku || !category_id) {
+      if (!title || !price || !status || !category_id) {
         return res.status(400).json({ status: 400, message: 'Missing required fields' });
       }
 
-      const existingProduct = await Product.findOne({ sku });
-      if (existingProduct) {
-        return res.status(400).json({ status: 400, message: 'SKU must be unique' });
-      }
+      // const existingProduct = await Product.findOne({ });
+      // if (existingProduct) {
+      //   return res.status(400).json({ status: 400, message:  must be unique' });
+      // }
 
       const product = new Product({
-        title, price, status, sku, category_id, is_featured,
+        title, price, status, category_id, is_featured,
         compare_price, description, short_description,
         brand_id, quantity, barcode
       });
@@ -105,7 +105,7 @@ export default {
     try {
       const { id } = req.params;
       const {
-        title, price, status, sku, category_id,
+        title, price, status, category_id,
         is_featured, compare_price, description,
         short_description, brand_id, quantity,
         barcode, size, gallary
@@ -115,7 +115,7 @@ export default {
       if (!product) return res.status(404).json({ status: 404, message: 'Product not found' });
 
       Object.assign(product, {
-        title, price, status, sku, category_id,
+        title, price, status, category_id,
         is_featured, compare_price, description,
         short_description, brand_id, quantity, barcode
       });
