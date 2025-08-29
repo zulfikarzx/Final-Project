@@ -84,9 +84,9 @@ const Navbar = () => {
       <div className="bg-primary/40 py-2">
         <div className="container flex justify-between items-center">
           <div>
-            <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2 ml-5">
+            <a href="/" className="font-bold text-2xl sm:text-3xl flex gap-2 ml-5">
               <img src={Logo} alt="Logo" className="w-20" />
-             <span className="text-white mt-4">StyleLoop</span> 
+             <span className="text-white mt-4">Fiker</span> 
             </a>
           </div>
 

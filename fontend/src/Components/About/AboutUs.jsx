@@ -7,10 +7,10 @@ const AboutUs = () => {
     <Navbar/>
     <div className="min-h-screen bg-white text-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-center text-green-600">About Style Loop</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center text-green-600">About Fiker</h1>
 
         <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
-          Welcome to <strong>Style Loop</strong> — where fashion meets freedom. We're more than just an online store.
+          Welcome to <strong>Fiker</strong> — where fashion meets freedom. We're more than just an online store.
           We’re your daily loop of style inspiration, curated products, and a community that celebrates individuality
           and confidence. Whether you're casual or classy, urban or chic, we’ve got the perfect loop for you.
         </p>
