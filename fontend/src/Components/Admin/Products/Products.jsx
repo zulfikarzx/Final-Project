@@ -101,7 +101,7 @@ const Products = () => {
                       <th className="py-3 px-4">Status</th>
                       <th className="py-3 px-4">Price</th>
                       <th className="py-3 px-4">Quantity</th>
-                      <th className="py-3 px-4">SKU</th>
+                     
                       <th className="py-3 px-4">Action</th>
                     </tr>
                   </thead>
@@ -122,7 +122,7 @@ const Products = () => {
                         </td>
                         <td className="py-3 px-4">{p.price}</td>
                         <td className="py-3 px-4">{p.quantity}</td>
-                        <td className="py-3 px-4">{p.sku}</td>
+                       
                         <td className="py-3 px-4 space-x-3">
                           <button
                             className="text-blue-600 hover:text-blue-800"
