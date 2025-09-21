@@ -37,10 +37,11 @@ import Cartdisplay from './Components/Cart/Cartdisplay'
 import Checkout from './Components/Checkout/Checkout'
 import { AuthRequire } from './Components/Context/AuthRequire'
 import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation'
-import AboutUs from './Components/About/Aboutus'
 import {default as AdminOrders} from './Components/Orders/Orders'
 import OdersDetails from './Components/Orders/OdersDetails'
-import Aboutus from './Components/About/Aboutus'
+import AboutUs from './Components/About/AboutUs.jsx'
+
+
 
 
 
