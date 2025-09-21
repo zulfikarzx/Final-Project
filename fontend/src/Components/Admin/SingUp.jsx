@@ -20,7 +20,7 @@ const SignUp = () => {
       setError('Passwords do not match');
       return;
     }
-    fetch('http://127.0.0.1:3000/api/register', {
+    fetch(`${import.meta.env.VITE_API_URL}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
