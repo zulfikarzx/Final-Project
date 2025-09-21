@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed:users": "node seeders/userSeeder.js",
-    "seed:all": "node seeders/index.js"
+    "seed:all": "node seeders/index.js",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
