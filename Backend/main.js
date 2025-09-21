@@ -18,7 +18,10 @@ const app = express()
 const port = 3000
  
 
-app.use(cors())
+app.use(cors({
+  origin: "https://your-frontend.vercel.app",
+  credentials: true
+}));
 
 app.use(express.static('public'))
 const conn = mongoose.connect('mongodb://127.0.0.1:27017/shop')
