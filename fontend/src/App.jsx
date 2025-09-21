@@ -40,6 +40,8 @@ import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation'
 import AboutUs from './Components/About/Aboutus'
 import {default as AdminOrders} from './Components/Orders/Orders'
 import OdersDetails from './Components/Orders/OdersDetails'
+import Aboutus from "./Components/About/Aboutus"
+
 
 function App() {
   const [orderPopup, setOrderPopup] = React.useState(false);

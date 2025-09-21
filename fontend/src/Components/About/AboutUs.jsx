@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import AboutUs from "./Components/About/AboutUs.jsx";
+
 
 const AboutUs = () => {
   return (
